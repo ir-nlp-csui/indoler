@@ -5,7 +5,7 @@ This data set consists of Indonesian court decision documents that have been ann
 ```json
 {
 	"doc" : "document number",
-	"seq" : "sentence number",
+	"sentence" : "sentence number",
 	"words" : "array of words in sentence"
 	"labels" : "Tagging of words"
 }
