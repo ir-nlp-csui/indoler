@@ -2,20 +2,20 @@
 
 This data set consists of Indonesian court decision documents that have been annotated as legal entities. There are 1010 decision documents on the website [Decision of the Supreme Court of Indonesia](https://decision3.mahkamahagung.go.id/). Available documents have been tokenized and stored using json format. Detailed dataset information is as follows:
 
-'''bash
+```bash
 {
 	"doc" : "document number",
 	"seq" : "sentence number",
 	"words" : "array of words in sentence"
 	"labels" : "Tagging of words"
 }
-'''
+```
 
 ## Here's one sentence from the dataset:
 
-''' bash
+```json
 {"doc": "doc: 1", "sentence": "seq: 1", "words": ["PUTUSAN", ".", "NOMOR", ":", "1974", "/", "Pid", ".", "Sus", "/", "2012", "/", "PN", ".", "JKT", ".", "BAR", ".", "DEMI", "KEADILAN", "BERDASARKAN", "KETUHANAN", "YANG", "MAHA", "ESA", "."], "labels": ["O", "O", "O", "O", "B_putusan", "I_putusan", "I_putusan", "I_putusan", "I_putusan", "I_putusan", "I_putusan", "I_putusan", "I_putusan", "I_putusan", "I_putusan", "I_putusan", "I_putusan", "I_putusan", "O", "O", "O", "O", "O", "O", "O", "O"]}
-'''
+```
 
 ## Reference
 Please cite the following paper if you use this dataset:
