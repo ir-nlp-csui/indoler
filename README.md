@@ -1,6 +1,6 @@
 # indoler
 
-This data set consists of Indonesian court decision documents that have been annotated as legal entities. There are 1010 decision documents on the website [Decision of the Supreme Court of Indonesia](https://decision3.mahkamahagung.go.id/). Available documents have been tokenized and stored using json format. Detailed dataset information is as follows:
+This data set consists of Indonesian court decision documents that have been annotated as legal entities. There are 1003 decision documents on the website [Decision of the Supreme Court of Indonesia](https://decision3.mahkamahagung.go.id/). Available documents have been tokenized and stored using json format. Detailed dataset information is as follows:
 
 ```json
 {
