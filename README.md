@@ -1,26 +1,45 @@
 # indoler
 
-This data set consists of Indonesian court decision documents that have been annotated as legal entities. There are 1003 decision documents on the website [Decision of the Supreme Court of Indonesia](https://decision3.mahkamahagung.go.id/). Available documents have been tokenized and stored using json format. Detailed dataset information is as follows:
+This repository contains the dataset used in our undergraduate thesis. The dataset contains 993 annotated court decission document. The document was taken from [Decision of the Supreme Court of Indonesia](https://decision3.mahkamahagung.go.id/). the documents have also been tokenized and cleaned. The data is stored using JSONL format with fields as follows:
 
 ```json
 {
-	"doc" : "document number",
-	"sentence" : "sentence number",
-	"words" : "array of words in sentence"
-	"labels" : "Tagging of words"
+	"id": "the internal id of the document",
+	"owner": "the person who annotate the document",
+	"lawyer": "whether the defendant has a lawyer present",
+	"verdict": "The type of verdict given in the document (guilty, bebas, or lepas)",
+	"indictment": "The type of indictment presented to the court (Tunggal, subsider, komul, alternatif, kombinasi, or gabungan)",
+	"text": "Word-splitted text",
+	"text-tags": "IOB formatted label"
 }
 ```
 
-## Here's one sentence from the dataset:
+## Here's two data from the dataset:
 
 ```json
-{
-	"doc": "doc: 1",
-	"sentence": "seq: 1",
-	"words": ["PUTUSAN", ".", "NOMOR", ":", "1974", "/", "Pid", ".", "Sus", "/", "2012", "/", "PN", ".", "JKT", ".", "BAR", ".", "DEMI", "KEADILAN", "BERDASARKAN", "KETUHANAN", "YANG", "MAHA", "ESA", "."],
-	"labels": ["O", "O", "O", "O", "B_putusan", "I_putusan", "I_putusan", "I_putusan", "I_putusan", "I_putusan", "I_putusan", "I_putusan", "I_putusan", "I_putusan", "I_putusan", "I_putusan", "I_putusan", "I_putusan", "O", "O", "O", "O", "O", "O", "O", "O"]
-}
+[
+	{
+		"id": 2743,
+		"owner": "agree",
+		"lawyer": False,
+		"verdict": "guilty",
+		"indictment": "subsider",
+		"text-tags": ["O", "O", "B-Nomor Putusan", "I-Nomor Putusan", "O", "O", "O", "O", "O", "O", "O", "B-Nama Pengadilan", "I-Nama Pengadilan", "I-Nama Pengadilan", ...],
+		"text": ["\ufeffputusan", "nomor", "325/pid.b/2015/pn", "bwi", "demi", "keadilan", "berdasarkan", "ketuhanan", "yang", "maha", "esa", "pengadilan", "negeri", "banyuwangi", ...]
+	},
+	{
+		"id": 2744,
+		"owner": "agree",
+		"lawyer": False,
+		"verdict": "guilty",
+		"indictment": "alternatif",
+		"text-tags": ["O", "O", "B-Nomor Putusan", "I-Nomor Putusan", "O", "O", "O", "O", "O", "O", "O", "B-Nama Pengadilan", "I-Nama Pengadilan", "I-Nama Pengadilan", ...],
+		"text": ["\ufeffputusan", "nomor", "285/pid.b/2016/pn", "sda", "demi", "keadilan", "berdasarkan", "ketuhanan", "yang", "maha", "esa", "pengadilan", "negeri", "sidoarjo", ...]
+	}
+]
 ```
+
+We also provide the data we used in each split in CSV format.
 
 ## Reference
 Please cite the following paper if you use this dataset:
@@ -28,4 +47,4 @@ Please cite the following paper if you use this dataset:
 **Nuranti, E. Q., and Yulianti, E.,** <a href="https://ieeexplore.ieee.org/abstract/document/9263157">“Legal Entity Recognition in Indonesian Court Decision Documents Using Bi-LSTM and CRF 597 Approaches,”</a> 2020 International Conference on Advanced Computer Science and Information Systems (ICACSIS), pp. 429–434.
 
 ## Contact
-**evi.y [at] cs.ui.ac.id**
+**evi.y [at] cs.ui.ac.id**. naradhipabhary27 [at] gmail.com
