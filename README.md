@@ -41,10 +41,6 @@ This repository contains the dataset used in our undergraduate thesis. The datas
 
 We also provide the data we used in each split in CSV format.
 
-## Reference
-Please cite the following paper if you use this dataset:
-
-**Nuranti, E. Q., and Yulianti, E.,** <a href="https://ieeexplore.ieee.org/abstract/document/9263157">“Legal Entity Recognition in Indonesian Court Decision Documents Using Bi-LSTM and CRF 597 Approaches,”</a> 2020 International Conference on Advanced Computer Science and Information Systems (ICACSIS), pp. 429–434.
 
 ## Contact
 **evi.y [at] cs.ui.ac.id**. naradhipabhary27 [at] gmail.com
